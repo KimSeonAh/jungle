@@ -1,0 +1,15 @@
+/*reset*/
+body{margin:0; padding:0}
+h1{margin:0}
+
+header{background: #333; color:#fff; height:70px;}
+header:after{content:''; display: block; clear: both}
+header h1{float:left}
+header nav{float:right}
+
+.container{width: 1000px; margin: 0 auto; }
+.container:after{content:''; display: block; clear: both}
+.container section{float: left; width:700px; height: 500px; background:#c1efff}
+.container aside{float: right; width:300px; height: 500px; background:#bbb}
+
+footer{background:#999; height:50px;}
