@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/fullpage.css" rel="stylesheet" type="text/css" />
+	<link href="css/03_fullpage.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/fullpage.js"></script>
+
+	<script>
+		$(function(){
+			$(".fullpage_area").fullpage({
+				navigation: true,
+				navigationPosition: "left",
+				sectionsColor: ["#999", "#4bbfc3", "#7baabe", "#666"],
+				navigationTooltips: ["Main", "Intro", "Map", "Contact"],//버튼 툴팁
+				showActiveTooltip: true //current 버튼 툴팁 활성화
+			});
+		})
+	</script>
+	<style>
+		.section .fp-tableCell {text-align: center; font-size: 80px; font-weight: bold; color: #fff; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)}
+	</style>
+
+</head>
+
+<body>
+	<div class="fullpage_area">
+		<div class="section">
+			Main
+		</div>
+		<div class="section">
+			Intro
+		</div>
+		<div class="section">
+			Map
+		</div>
+		<div class="section">
+			Contact
+		</div>
+	</div>
+</body>
+
+</html>

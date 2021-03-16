@@ -38,15 +38,19 @@
 			}
 		</style>
 		<script>
-			var num = 0;
-			setInterval(function(){
-				$(".section .box").removeClass("on");
-				$(".section .box").eq(num).addClass("on");
-				num++;
-				if(num == 3){
-					num =0;
-				}
-			},1000);
+			$(function(){
+					// $(".section .box").eq(0).addClass("on")
+				
+				var num = 0;
+				setInterval(function(){
+					$(".section .box").removeClass("on");
+					$(".section .box").eq(num).addClass("on");
+					num++;
+					if(num == 3){
+						num =0;
+					}
+				},1000);
+			})
 		</script>
 
   </head>

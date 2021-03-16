@@ -37,6 +37,7 @@
 	<script>
 		$(function () {
 			$(".btn_top").hide();
+
 			$(window).scroll(function(){
 				//console.log($(this).scrollTop());
 				if($(this).scrollTop() == 0){
@@ -45,9 +46,18 @@
 					$(".btn_top").show(300);
 				}
 			})
+			// (중복) var value로 처리한 것 
+			$(window).scroll(function(){
+				var value = $(this).scrollTop();
+				if(value == 0){
+					$(".btn_top").hide(300);
+				}else{
+					$(".btn_top").show(300);
+				}
+			})
 
 			$(".btn_top").click(function(){
-				//$("html").scrollTop(0);
+				//$("html").scrollTop(0); //()안에 값이 있으면 위치 이동 이벤트
 				$("html").animate({
 					"scrollTop":0
 				}, 1000);
