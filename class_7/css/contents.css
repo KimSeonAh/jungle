@@ -1,0 +1,29 @@
+.wrap {width: 300px; padding: 5px; border: 1px solid #999; box-sizing: border-box; font-size: 13px; color: #333;}
+
+.chat_area {overflow-y: auto; overflow-x: hidden; height: 350px; padding: 10px; border-radius: 5px; background-color: #acc2d2;}
+.chat_area .item + .item {margin-top: 15px;}
+.chat_area .item.mymsg {text-align: right;}
+.chat_area .item .box {position: relative; display: inline-block; max-width: 180px;}
+
+.chat_area .item .box::before {content: ""; display: block; position: absolute; left: -8px; top: 9px; width: 0; height: 0; border-top: 0 solid transparent; border-bottom: 8px solid transparent; border-right: 8px solid #fff;}
+.chat_area .item.mymsg .box::before {left: auto; right: -8px; border-right: 0; border-left: 8px solid #fee600;}
+.chat_area .item .box .msg {padding: 8px; border-radius: 8px; background-color: #fff;}
+.chat_area .item.mymsg .box .msg {background-color: #fee600;}
+.chat_area .item .box .time {position: absolute; right: -75px; bottom: 3px; width: 70px; font-size: 11px; color: #999;}
+.chat_area .item.mymsg .box .time {right: auto; left: -75px;}
+
+
+
+.input_area {margin-top: 5px;}
+.input_area > input[type="text"] {width: 100%; height: 30px; padding-left: 10px; box-sizing: border-box; border: 0 none; border-radius: 5px; background-color: #ddd;}
+.input_area > input[type="text"] + input[type="text"] {margin-top: 5px;}
+.input_area > input[type="text"]::placeholder {color: #999;}
+
+/* 모바일 영역 */
+@media all and (max-width: 768px){
+    html, body {height: 100%;}
+    .wrap {width: auto; height: 100%; border: 0 none; font-size: 15px;}
+    .chat_area {height: calc(100% - 135px);}
+    .chat_area .item .box .msg {font-size: 17px;}
+    .input_area > input[type="text"] {height: 50px;}
+}
