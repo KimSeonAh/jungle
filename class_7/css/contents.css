@@ -1,6 +1,6 @@
 .wrap {width: 300px; padding: 5px; border: 1px solid #999; box-sizing: border-box; font-size: 13px; color: #333;}
 
-.chat_area {overflow-y: auto; overflow-x: hidden; height: 350px; padding: 10px; border-radius: 5px; background-color: #acc2d2;}
+.chat_area {overflow-x: hidden; overflow-y: auto; height: 350px; padding: 10px; border-radius: 5px; background-color: #acc2d2;}
 .chat_area .item + .item {margin-top: 15px;}
 .chat_area .item.mymsg {text-align: right;}
 .chat_area .item .box {position: relative; display: inline-block; max-width: 180px;}
@@ -27,3 +27,8 @@
     .chat_area .item .box .msg {font-size: 15px;}
     .input_area > input[type="text"] {height: 50px;}
 }
+
+/* 말풍선 입력시 애니메이션처리 */
+.chat_area .item {transition: all .3s; opacity: 0; transform: translateX(-30px);} 
+.chat_area .item.mymsg {transform: translateX(30px);}
+.chat_area .item.on {opacity: 1; transform: translateX(0);}
