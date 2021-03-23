@@ -24,6 +24,6 @@
     html, body {height: 100%;}
     .wrap {width: auto; height: 100%; border: 0 none; font-size: 15px;}
     .chat_area {height: calc(100% - 135px);}
-    .chat_area .item .box .msg {font-size: 17px;}
+    .chat_area .item .box .msg {font-size: 15px;}
     .input_area > input[type="text"] {height: 50px;}
 }
